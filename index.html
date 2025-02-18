@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteSync-Links</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+     <!-- Favicon -->
+     <link rel="icon" href="images/pic1.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            color: #e0d5c3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .profile {
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile img {
+            width: 20vw;
+            height: 20vw;
+            max-width: 120px;
+            max-height: 120px;
+            border-radius: 50%;
+            box-shadow: 0 0 15px #8b5e3b, 0 0 30px #6d4c41;
+        }
+
+        .profile h2, .profile h5 {
+            color: #000; /* Texto preto */
+        }
+
+        .links {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
+            max-width: 350px;
+            padding: 0 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .links a {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            color: #000; /* Texto preto */
+            padding: 10px 20px;
+            border: 2px solid rgba(139, 94, 59, 0.7); /* Transparência na borda */
+            background: linear-gradient(45deg, rgba(78, 52, 46, 0.8), rgba(139, 94, 59, 0.8)); /* Transparência no fundo */
+            text-align: center;
+            transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+            border-radius: 25px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .links a:hover {
+            background: linear-gradient(45deg, rgba(139, 94, 59, 0.8), rgba(78, 52, 46, 0.8)); /* Transparência no fundo ao passar o mouse */
+            color: #fff;
+            box-shadow: 0 0 20px rgba(139, 94, 59, 0.8), 0 0 40px rgba(109, 76, 65, 0.8); /* Transparência nas sombras */
+        }
+
+        .links h5 {
+            color: #000; /* Texto preto */
+        }
+
+        footer {
+            margin-top: auto;
+            color: #e0d5c3;
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer p {
+            font-size: 11px;
+            color: #000; /* Texto preto */
+        }
+
+        @media (max-width: 768px) {
+            .profile img {
+                width: 35vw;
+                height: 35vw;
+            }
+
+            .links a {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+
+            footer p {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .profile img {
+                width: 40vw;
+                height: 40vw;
+            }
+
+            .links a {
+                font-size: 18px;
+                padding: 15px 30px;
+            }
+
+            footer p {
+                font-size: 10px;
+            }
+        }
+
+        #stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            animation: starsMove 20s infinite linear;
+            z-index: 1;
+        }
+
+        @keyframes starsMove {
+            from { background-position: 0 0; }
+            to { background-position: 100% 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div id="stars"></div>
+    <div class="profile">
+        <img src="images/pic.webp" alt="Profile Picture">
+        <h2>Luan Oliveira</h2>
+        <h5>Loja ByteSync-Informática <i class="fa-solid fa-tag"></i></h5>
+    </div>
+    <div class="links">
+        <a href="https://www.instagram.com/bytesync.info" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <a href="site" target="_blank"><i class="fa-solid fa-cart-shopping"></i> E-Commerce</a>
+        <a href="https://wa.me/5511930522075" target="_blank"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <h5> Hub de Projetos Front-end <i class="fa-solid fa-phone"></i></h5>
+        <a href="seusite" target="_blank"><i class="fa-solid fa-code"></i> Portfólio</a>
+        <a href="https://github.com/luanoliveiralab" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://luanoliveiralab.github.io/formulario/" target="_blank"><i class="fa-solid fa-envelope"></i> Send-me</a>
+    </div>
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> Luan Oliveira - ByteSync. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>      
+</body>
+</html>
